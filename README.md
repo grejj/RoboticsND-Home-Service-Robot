@@ -5,5 +5,6 @@ This unit of the course involves the investigation and implementation of the dec
 The following concepts were overviewed in this units 4 modules
 
 * Classic Path Planning
-* Sample-Based and Probabilistic Path Planning
+* Sample-Based Planning
+* Probabilistic Planning
 * Final Project: Home Service Robot
