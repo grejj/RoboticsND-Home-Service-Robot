@@ -8,7 +8,7 @@ In this problem, a robot is moving inside a 5x6 map from the start to the goal. 
 
 The 5x6 grid is shown below where 1's represent obstacles and 0's represent free space. The robot start position is (0,0) and the goal position is (4,5). Additionally, the cost of movement from one cell to another is 1.
 
-<img src="Images/grid.png" width="900" height="500">
+<img src="../Images/grid.png" width="900" height="500">
 
 This problem was solved using breadth-first search and A* search with solutions found in __breadth_first_search.cpp__ and __a_search.cpp__ source files, respectively.
 
@@ -31,4 +31,4 @@ $ ./a.out
 
 The before and after figures are shown below for the map:
 
-<img src="Images/map.png" width="450" height="250"><img src="Images/path.png" width="450" height="250">
+<img src="../Images/map.png" width="450" height="250"><img src="../Images/path.png" width="450" height="250">
