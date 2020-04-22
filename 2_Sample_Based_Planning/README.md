@@ -15,7 +15,7 @@ We will look at 2 approaches to sample-based planning:
 
 The PRM method takes random samples of the configuration space, determines if the space is free, and if so, will add the configuration to the resulting graph by attaching it to its k-nearest neighbors. This process repeats for fixed number of iterations. Then a graph search algorithm, like A*, is applied to the graph to find a path. The pseudocode for this algorithm is shown below.
 
-<img src="Images/prm.png" width="900" height="500">
+<img src="Images/prm.png" width="450" height="250">
 
 Parameters such as iteration number, number of k-nearest neighbors, etc. can be tweaked according to certain applications or use cases. Another nice quality of PRM, is that it is an multi-query planner, meaning the computationally slow process of generating the graph can be used more than once by the graph search algorithm. This is useful in environments where the surrounding environment is not changing frequently.
 
@@ -23,6 +23,6 @@ Parameters such as iteration number, number of k-nearest neighbors, etc. can be 
 
 For environments where configurations are changing more frequently, RRT is a more effective methods of planning. RRT generates a tree, a special graph where child nodes are not connected to on another. In RRT, both the start and goal nodes begin generating trees, by randomly creating nodes in the configuration space and adding them to the closest node in the tree if they can be attached collision free. If there is a collision, the node will be replaced with one closer to to the nearest neighbour along the path to the nearest neighbour. This process is repeated until both trees can be attached. The pseudocode can be found below.
 
-<img src="Images/rrt.png" width="900" height="500">
+<img src="Images/rrt.png" width="450" height="250">
 
 Parameters such as sampling method, max distance to nearest node, etc. can be tuned to fit the appropriate application. Since RRT starts exploring with both the goal and start nodes, it is a single-query planner, meaning the resulting graph can only used to solve for the path once. However, since RRT is generating a graph for the entire configuration space, it is much faster in generating graphs and should be used on robots in environments that are constantly changing.
